@@ -1,5 +1,5 @@
 :root {
-  --w: 64vw;
+  --w: 808px;
 }
 
 .container {
@@ -14,8 +14,8 @@
 .controls{
   display: inline-block;
   background-color: #282828;
-  width: calc(100vw - var(--w) - 5vw);
-  height: calc((var(--w) * 0.75) - 2vw);
+  width: auto;
+  height: auto;
   margin: 1vw;
   position: absolute;
   padding: 1vw;

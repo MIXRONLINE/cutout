@@ -49,7 +49,8 @@ function App() {
     text = text.concat(facePos);
 
     boxes.forEach((b)=>{
-      let s = "'"+ b.x + ' / ' + b.y + ' / '+ (parseInt(b.x) + parseInt(b.width.toString().split('px')[0])).toString() +' / ' + (parseInt(b.y) + parseInt(b.height.toString().split('px')[0])).toString() +"',"
+      let s = `[${b.x},${b.y},${parseInt(b.width.toString().split('px')[0])},${parseInt(b.height.toString().split('px')[0])}],`;
+
       text = text.concat(s);
     })
 
