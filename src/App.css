@@ -1,10 +1,11 @@
 :root {
-  --w: 808px;
+  --w: 780px;
+  --h: 540px;
 }
 
 .container {
   width: var(--w);
-  height: calc(var(--w) * 0.75);
+  height: var(--h);
   background-color: black;
   margin: 1vw;
   margin-right: 0;
