@@ -11,14 +11,17 @@ const style = {
   color: 'white'
 };
 
+const h = 9;
+const w = 16;
+
 function App() {
 
   const [img, setImg] = useState('');
   const [num, setNum] = useState(1);
   const [boxes, setBoxes] = useState(
     [{
-      width: 40,
-      height: 30,
+      width: w*10,
+      height: h*10,
       x: 10,
       y: 10
     }]
@@ -48,7 +51,7 @@ function App() {
     let facePos = "facePos:[";
     text = text.concat(facePos);
 
-    boxes.forEach((b)=>{
+    boxes.forEach((b) => {
       let s = `[${b.x},${b.y},${parseInt(b.width.toString().split('px')[0])},${parseInt(b.height.toString().split('px')[0])}],`;
 
       text = text.concat(s);
@@ -65,8 +68,8 @@ function App() {
     let startX = 10;
     for (let i = 0; i < num; i++) {
       b.push({
-        width: 40,
-        height: 30,
+        width: w*10,
+        height: h*10,
         x: startX,
         y: 10
       })
@@ -92,7 +95,7 @@ function App() {
               return (
                 <Rnd
                   key={key}
-                  lockAspectRatio={1.333333333333333333}
+                  lockAspectRatio={w/h}
                   bounds='parent'
                   style={style}
                   size={{ width: box.width, height: box.height }}
